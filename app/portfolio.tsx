@@ -2,10 +2,12 @@
 import { Mail as EnvelopeIcon, GithubIcon, LinkedinIcon } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+
 import { useEffect, useState } from "react"
 import { Menu as HamburgerIcon } from 'lucide-react'; // Import Hamburger icon
 
 import { Button } from "@/components/ui/button"
+import AnimatedLink from "@/components/ui/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { profile } from "console"
 
@@ -52,25 +54,32 @@ export default function Portfolio({ data: initialData }: { data: PortfolioData |
 
   return (
     <div className="min-h-screen bg-dark-bg">
-       <header className={`bg-black fixed w-full z-50 transition-colors duration-300 ${isMenuOpen ? 'bg-black' : ''}`}>
-            <nav className="flex justify-between items-center max-w-6xl mx-auto py-6 px-4 md:px-6 lg:px-8">
-              <button
-                className="md:hidden focus:outline-none"
-                onClick={toggleMenu}
-                aria-label="Toggle Menu"
-              >
-                <HamburgerIcon className="w-6 h-6 text-dark-text" />
-              </button>
+  <header className="bg-dark-bg fixed top-0 w-full items-center py-6 px-4 md:px-6 lg:px-8 z-10">
+  <nav className="flex justify-between items-center max-w-6xl mx-auto">
+    {/* Toggle Button for Mobile */}
+    <button
+      className="md:hidden focus:outline-none"
+      onClick={toggleMenu}
+      aria-label="Toggle Menu"
+    >
+      <HamburgerIcon className="w-6 h-6 text-dark-text" />
+    </button>
 
-              {/* Navigation Links */}
-              <div className={`space-x-4 md:flex ${isMenuOpen ? 'flex' : 'hidden'} md:block justify-center flex-1`}>
-                <Link href="#about" className="text-dark-text hover:text-red-800 text-lg font-bold">About</Link>
-                <Link href="#projects" className="text-dark-text hover:text-red-800 text-lg font-bold">Projects</Link>
-                <Link href="#skills" className="text-dark-text hover:text-red-800 text-lg font-bold">Skills</Link>
-                <Link href="#contact" className="text-dark-text hover:text-red-800 text-lg font-bold">Contact</Link>
-              </div>
-            </nav>
-        </header>
+    {/* Navigation Links */}
+    <div
+      className={`space-x-4 md:flex ${
+        isMenuOpen ? 'flex' : 'hidden'
+      } md:block justify-center flex-1`}
+    >
+      <AnimatedLink href="#about">About</AnimatedLink>
+      <AnimatedLink href="#projects">Projects</AnimatedLink>
+      <AnimatedLink href="#skills">Skills</AnimatedLink>
+      <AnimatedLink href="#contact">Contact</AnimatedLink>
+    </div>
+  </nav>
+</header>
+
+
       <main className="max-w-6xl mx-auto px-4 py-16 md:px-6 lg:px-8">
         
         <section id="about" className="mb-16">
