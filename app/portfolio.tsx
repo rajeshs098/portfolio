@@ -191,12 +191,13 @@ export default function Portfolio({ data: initialData }: { data: PortfolioData |
                 <CardTitle>Send a Message</CardTitle>
               </CardHeader>
               <CardContent>
-                  <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSfYmQTNz6hp8pu6yzX_UySNJN8ma-T-Z4nnsYnRctMSaRsUEg/viewform?embedded=true"
-                    className="border border-gray-300 rounded-md"
-                  >
-                    Loading…
-                  </iframe>
+                <iframe
+                          src="https://docs.google.com/forms/d/e/1FAIpQLSfYmQTNz6hp8pu6yzX_UySNJN8ma-T-Z4nnsYnRctMSaRsUEg/viewform?embedded=true"
+                          className="border border-gray-300 rounded-md h-[600px] w-full"
+                        >
+                          Loading…
+                        </iframe>
+
               </CardContent>
             </Card>
           </div>
