@@ -90,7 +90,7 @@ export default function Portfolio({ data: initialData }: { data: PortfolioData |
             />
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div>
-              <h2 className="text-4xl text-dark-text font-bold mb-4 py-4">Hello, I'm {data.name}</h2>
+              <h2 className="text-4xl text-dark-text font-bold mb-4 py-4">Hello, I&apos;m {data.name}</h2>
               {/* <h3 className="text-2xl text-dark-text mb-4">{data.title}</h3> */}
               <p className="text-xl text-dark-text mb-6">{data.about}</p>
               <Link href={data.resume} passHref>
