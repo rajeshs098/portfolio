@@ -9,8 +9,6 @@ import { Menu as HamburgerIcon } from 'lucide-react'; // Import Hamburger icon
 import { Button } from "@/components/ui/button"
 import AnimatedLink from "@/components/ui/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { profile } from "console"
-
 interface Project {
   id: number;
   title: string;
