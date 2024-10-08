@@ -193,11 +193,6 @@ export default function Portfolio({ data: initialData }: { data: PortfolioData |
               <CardContent>
                   <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSfYmQTNz6hp8pu6yzX_UySNJN8ma-T-Z4nnsYnRctMSaRsUEg/viewform?embedded=true"
-                    width="100%"
-                    height="500"
-                    frameBorder="0"
-                    marginHeight="0"
-                    marginWidth="0"
                     className="border border-gray-300 rounded-md"
                   >
                     Loading…
